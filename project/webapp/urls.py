@@ -13,13 +13,13 @@ Including another URLconf
     1. Add an import:  from blog import urls as blog_urls
     2. Add a URL to urlpatterns:  url(r'^blog/', include(blog_urls))
 """
-from django.conf.urls import include, url
-from django.contrib import admin
-
+from django.conf.urls import url
+import views
 import rest
 
 urlpatterns = [
-    url(r'^users/$', rest.user_collection),
-    url(r'^routes/$', rest.routes_collection),
-    url(r'^geopoints/$', rest.geo_points_collection),
+    url(r'^$', views.index, name='index'),
+    url(r'^rest/users/$', rest.user_collection),
+    url(r'^rest/routes/$', rest.routes_collection),
+    url(r'^rest/geopoints/$', rest.geo_points_collection),
 ]
