@@ -5,13 +5,13 @@ from rest_framework.response import Response
 
 from rest_framework import status
 
-from webapp.models import User
-from webapp.models import Route
-from webapp.models import GeoPoint
+from models import User
+from models import Route
+from models import GeoPoint
 
-from webapp.serializers import UserSerializer
-from webapp.serializers import RouteSerializer
-from webapp.serializers import GeoPointSerializer
+from serializers import UserSerializer
+from serializers import RouteSerializer
+from serializers import GeoPointSerializer
 
 @api_view(['GET', 'PUT'])
 def user_collection(request):
