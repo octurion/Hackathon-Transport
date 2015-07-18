@@ -8,6 +8,7 @@ class User(models.Model):
 
 class Route(models.Model):
     user = models.ForeignKey(User)
+    type = models.CharField(max_length=40)
 
 
 class GeoPoint(models.Model):
