@@ -9,7 +9,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
 
-        <title>{% block title %} {%  endblock %}</title>
+        <title>YouMove</title>
 
         {% block more_head %} {% endblock %}
 
@@ -33,11 +33,19 @@
             <nav class="navbar navbar-default">
                 <div class="container-fluid">
                     <div class="navbar-header">
-                        <a class="navbar-brand">{{ user }}</a>
+                        <a class="navbar-brand">YouMove</a>
                     </div>
                     <div id="navbar" class="navbar-collapse collapse">
                         <ul class="nav navbar-nav">
                             <li class="{% active_page request 'index' %}"><a href="{% url 'webapp:index' %}">Index</a></li>
+                        </ul>
+                        <ul class="nav navbar-nav navbar-right">
+                            {% if logged_in_user %}
+                                <li><a>Hi {{ logged_in_user }}!</a></li>
+                            {% else %}
+                                <li><a href="{% url 'webapp:register' %}">Register</a></li>
+                                <li><a href="{% url 'webapp:login' %}">Login</a></li>
+                            {% endif %}
                         </ul>
                     </div><!--/.nav-collapse -->
                 </div><!--/.container-fluid -->
