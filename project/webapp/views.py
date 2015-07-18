@@ -4,14 +4,16 @@ from django.http import HttpResponse
 
 from rest_framework.decorators import api_view
 from rest_framework.response import Response
+from rest_framework import status
 
-from webapp.models import User
-from webapp.models import Route
-from webapp.models import GeoPoint
+from models import User
+from models import Route
+from models import GeoPoint
 
-from webapp.serializers import UserSerializer
-from webapp.serializers import RouteSerializer
-from webapp.serializers import GeoPointSerializer
+from serializers import UserSerializer
+from serializers import RouteSerializer
+from serializers import GeoPointSerializer
+
 
 @api_view(['GET', 'PUT'])
 def user_collection(request):
@@ -21,12 +23,13 @@ def user_collection(request):
         return Response(serializer.data)
 
     if request.method == 'PUT':
-        serializer = UserSerializer(data = request.data)
+        serializer = UserSerializer(data=request.data)
         if not serializer.is_valid():
             return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
         serializer.save()
         return Response(serializer.data)
+
 
 @api_view(['GET', 'PUT'])
 def routes_collection(request):
@@ -36,12 +39,13 @@ def routes_collection(request):
         return Response(serializer.data)
 
     if request.method == 'PUT':
-        serializer = RouteSerializer(data = request.data)
+        serializer = RouteSerializer(data=request.data)
         if not serializer.is_valid():
             return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
         serializer.save()
         return Response(serializer.data)
+
 
 @api_view(['GET', 'PUT'])
 def geo_points_collection(request):
@@ -51,7 +55,7 @@ def geo_points_collection(request):
         return Response(serializer.data)
 
     if request.method == 'PUT':
-        serializer = GeoPointSerializer(data = request.data)
+        serializer = GeoPointSerializer(data=request.data)
         if not serializer.is_valid():
             return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
