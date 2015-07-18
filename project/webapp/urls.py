@@ -21,7 +21,7 @@ urlpatterns = [
     url(r'^$', views.index, name='index'),
     url(r'^register/$', views.register, name='register'),
     url(r'^login/$', views.user_login, name='login'),
-
+    url(r'^user_routes$', views.user_routes, name='user_routes'),
     url(r'^rest/users/$', rest.user_collection),
     url(r'^rest/routes/$', rest.routes_collection),
     url(r'^rest/geopoints/$', rest.geo_points_collection),

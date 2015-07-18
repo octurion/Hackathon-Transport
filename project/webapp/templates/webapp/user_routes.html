@@ -12,5 +12,9 @@ Your past routes
 
 
 {% block body_block %}
-    <p>hi</p>
+<ul>
+    {% for item in routes %}
+    <li>{{item.type}}</li>
+    {% endfor %}
+</ul>
 {% endblock %}
