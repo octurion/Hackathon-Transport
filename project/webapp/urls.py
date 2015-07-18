@@ -20,4 +20,6 @@ import views
 
 urlpatterns = [
     url(r'^users/$', views.user_collection),
+    url(r'^routes/$', views.routes_collection),
+    url(r'^geopoints/$', views.geo_points_collection),
 ]
