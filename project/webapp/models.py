@@ -14,5 +14,5 @@ class GeoPoint(models.Model):
     latitude = models.FloatField()
     longitude = models.FloatField()
     timestamp = models.DateTimeField()
-    id = models.IntegerField()
+    sequence_id = models.IntegerField()
     route = models.ForeignKey(Route)
