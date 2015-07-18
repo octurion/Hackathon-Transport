@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="173b71ca-b822-4d29-8a4f-ccec9b3187cd" name="Default" comment="Moved get_distance from models.py to extras.py">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/project/webapp/extras.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/project/webapp/views.py" />
+    <list default="true" id="173b71ca-b822-4d29-8a4f-ccec9b3187cd" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="Hackathon-Transport.iws" />
@@ -478,7 +476,13 @@
       <option name="project" value="LOCAL" />
       <updated>1437231801426</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Moved get_distance from models.py to extras.py">
+      <created>1437232020312</created>
+      <option name="number" value="00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1437232020312</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="ToolWindowManager">
