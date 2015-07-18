@@ -16,10 +16,10 @@ Including another URLconf
 from django.conf.urls import include, url
 from django.contrib import admin
 
-import views
+import rest
 
 urlpatterns = [
-    url(r'^users/$', views.user_collection),
-    url(r'^routes/$', views.routes_collection),
-    url(r'^geopoints/$', views.geo_points_collection),
+    url(r'^users/$', rest.user_collection),
+    url(r'^routes/$', rest.routes_collection),
+    url(r'^geopoints/$', rest.geo_points_collection),
 ]
