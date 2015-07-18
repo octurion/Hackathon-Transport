@@ -1,0 +1,27 @@
+{% extends "webapp/base.html" %}
+
+{% load staticfiles %}
+
+{% block title %}
+{% endblock %}
+
+
+{% block more_head %}
+{% endblock %}
+
+{% block body_block %}
+    {% if registered %}
+        <p>Thank you for registering!</p>
+    {% else %}
+        <p>Register here!</p>
+
+        <form id="user_form" method="post" action="{% url 'webapp:register' %}" enctype="multipart/form-data">
+
+            {% csrf_token %}
+            {{ user_form.as_p }}
+
+            <!-- Provide a button to click to submit the form. -->
+            <input type="submit" name="submit" value="Register" />
+        </form>
+    {% endif %}
+{% endblock %}
